@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<perspective>
+	<models>
+		<model name="modules_generic/rootfolder">
+			<children>
+				<child model="modules_generic/folder" />
+			</children>
+			<contextactions>
+				<contextaction name="edit" />
+				<contextaction name="import" />
+			</contextactions>
+		</model>
+	</models>
+	<toolbar>
+		<toolbarbutton name="editPreference" />
+		<toolbarbutton name="import" />
+	</toolbar>
+	<actions>
+		<action name="refresh" single="true" icon="refresh" label="&amp;modules.uixul.bo.actions.Refresh;" />
+		<action name="edit" single="true" permission="Load" icon="edit" label="&amp;modules.uixul.bo.actions.Edit;" />
+		<action name="editPreference" global="true" single="true" icon="edit" label="&amp;modules.uixul.bo.general.Preferences;" />
+		<action name="delete" permission="Delete" icon="delete" label="&amp;modules.uixul.bo.actions.Delete;" />
+		<action name="openFolder" icon="folder_into" label="&amp;modules.uixul.bo.actions.OpenFolder;" />
+		<action name="createFolder" single="true" icon="create-folder" label="&amp;modules.uixul.bo.actions.Create-folder;" />
+		<action name="import" global="true" single="true" permission="Import" icon="reload" label="&amp;modules.preferences.bo.actions.Import;" />
+	</actions>
+</perspective>

@@ -1,0 +1,25 @@
+<hbox flex="1">
+	<stack width="250">
+		<vbox flex="1" style="opacity:0.99">
+			<cnavigationtree flex="1" id="navigationTree"/>
+		</vbox>
+		<chelppanel hidden="true" flex="1" />
+	</stack>
+	<splitter collapse="before">
+		<wsplitterbutton />
+	</splitter>
+	<deck flex="1" anonid="mainViewDeck">
+		<vbox flex="1" anonid="documentlistmode">
+			<cmoduletoolbar id="moduletoolbar" />
+			<cmodulelist id="documentlist" flex="1" />	
+			<wform id="moduleForm" />		
+		</vbox>
+		<tal:block change:documenteditors="module preferences" />			
+	</deck>
+	<!-- TODO For old wform -->
+	<splitter collapse="after">
+		<wsplitterbutton />
+	</splitter>
+	<wmultitree width="210" id="rscTree" debug="true" candrag="true" hideheader="true" collapsed="true"
+	i18n:attributes="title &amp;modules.generic.backoffice.ResourcesTree;" />
+</hbox>

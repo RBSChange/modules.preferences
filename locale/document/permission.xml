@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localization>
+
+  <entity id="edition-form-title">
+    <locale lang="fr">gestion des droits</locale>
+    <locale lang="en">right management</locale>
+    <locale lang="de">Rechteverwaltung</locale>
+  </entity>
+
+  <entity id="Admin">
+    <locale lang="fr">Administrateur</locale>
+    <locale lang="en">Administrator</locale>
+    <locale lang="de">Administrator</locale>
+  </entity>
+  <entity id="Admin-help">
+    <locale lang="fr">Administrateur</locale>
+    <locale lang="en">Administrator</locale>
+    <locale lang="de">Administrator</locale>
+  </entity>
+
+  <entity id="Guest">
+    <locale lang="fr">Invité</locale>
+    <locale lang="en">Guest</locale>
+    <locale lang="de">Gast</locale>
+  </entity>
+  <entity id="Guest-help">
+    <locale lang="fr">Autorisé à naviguer dans le module</locale>
+    <locale lang="en">Authorized to enter and navigate into module</locale>
+    <locale lang="de">Berechtigt, im Modul zu surfen</locale>
+  </entity>
+</localization>

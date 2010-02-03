@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rights>
+	<actions>
+		<document name="rootfolder" />
+		<document name="preferences" />
+		<action name="Import" />
+	</actions>
+	<roles>
+		<role name="Admin">
+			<permission name="*" />
+			<permission name="LoadPermissions.*" />
+			<permission name="SavePermissions.*" />
+			<permission name="Import" />
+			<permission name="Enabled" />
+			<permission name="List.*" />
+			<permission name="Update.*" />
+			<permission name="Load.*" />
+		</role>
+		<role name="Guest">
+			<permission name="Enabled" />
+			<permission name="List.*" />
+		</role>
+	</roles>
+</rights>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<behaviour>
+  <event type="select" target="*" actions="viewInformation"/>
+  <datasources import="picker">
+  	<module name="website"/>
+  	<module name="list"/>
+  	<module name="notification"/>
+  	<module name="media"/>
+  </datasources>
+  <columns>
+    <column ref="label" flex="5" primary="true" properties="type block"/>
+  </columns>
+</behaviour>
