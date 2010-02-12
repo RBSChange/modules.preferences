@@ -15,6 +15,7 @@
 			<permission name="List.*" />
 			<permission name="Update.*" />
 			<permission name="Load.*" />
+			<permission name="EditLocale"/>
 		</role>
 		<role name="Guest">
 			<permission name="Enabled" />
