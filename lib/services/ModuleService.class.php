@@ -35,12 +35,10 @@ class preferences_ModuleService extends ModuleBaseService
 	private function getPreferencesDocumentModels()
 	{
 		$result = array();
-		
 		$modulesModels = f_persistentdocument_PersistentDocumentModel::getDocumentModelNamesByModules();
 		foreach ($modulesModels as $moduleName => $modelNameArray)
 		{
-			$visibleConstName = "MOD_" . strtoupper($moduleName) . "_VISIBLE";
-			if (defined($visibleConstName) && constant($visibleConstName))
+			if (ModuleService::getInstance()->getModule($moduleName)->isVisible())
 			{
 				foreach ($modelNameArray as $modelName)
 				{
