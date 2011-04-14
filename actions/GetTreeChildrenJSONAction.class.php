@@ -4,7 +4,6 @@
  */
 class preferences_GetTreeChildrenJSONAction extends generic_GetTreeChildrenJSONAction
 {
-	
 	/**
 	 * @see generic_GetTreeChildrenJSONAction::getTreeChildren()
 	 *

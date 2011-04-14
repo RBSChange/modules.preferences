@@ -21,17 +21,10 @@ class preferences_ModuleService extends ModuleBaseService
 		}
 		return self::$instance;
 	}
-	
-	/**
-	 * @param Integer $documentId
-	 * @return f_persistentdocument_PersistentTreeNode
-	 */
-	//	public function getParentNodeForPermissions($documentId)
-	//	{
-	//		// Define this method to handle permissions on a virtual tree node. Example available in list module.
-	//	}
-	
 
+	/**
+	 * @return array
+	 */
 	private function getPreferencesDocumentModels()
 	{
 		$result = array();
@@ -50,7 +43,6 @@ class preferences_ModuleService extends ModuleBaseService
 				}
 			}
 		}
-		
 		return $result;
 	}
 	
@@ -58,8 +50,7 @@ class preferences_ModuleService extends ModuleBaseService
 	 * Returns the preferences document of the specified module.
 	 *
 	 * @param string $moduleName The name of the module.
-	 *
-	 * @return object The preferences document .
+	 * @return object The preferences document.
 	 */
 	private function getPreferencesDocument($modelName)
 	{
@@ -68,6 +59,9 @@ class preferences_ModuleService extends ModuleBaseService
 		return $persistentProvider->createQuery($modelName, false)->findUnique();
 	}
 	
+	/**
+	 * @return array
+	 */
 	public function getPreferencesDocumentInfo()
 	{
 		$result = array();
@@ -88,7 +82,7 @@ class preferences_ModuleService extends ModuleBaseService
 	}
 	
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getPerspectiveDocument()
 	{
@@ -106,6 +100,9 @@ class preferences_ModuleService extends ModuleBaseService
 		return implode("\n", $string);
 	}
 	
+	/**
+	 * @return array
+	 */
 	public function importPreferencesDocuments()
 	{
 		$result = array();
