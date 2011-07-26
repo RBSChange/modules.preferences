@@ -16,10 +16,4 @@
 		</vbox>
 		<tal:block change:documenteditors="module preferences" />			
 	</deck>
-	<!-- TODO For old wform -->
-	<splitter collapse="after">
-		<wsplitterbutton />
-	</splitter>
-	<wmultitree width="210" id="rscTree" debug="true" candrag="true" hideheader="true" collapsed="true"
-	i18n:attributes="title &amp;modules.generic.backoffice.ResourcesTree;" />
 </hbox>
