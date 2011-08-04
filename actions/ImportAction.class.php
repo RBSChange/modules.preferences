@@ -3,7 +3,7 @@
  * preferences_ImportAction
  * @package modules.preferences.actions
  */
-class preferences_ImportAction extends f_action_BaseJSONAction
+class preferences_ImportAction extends change_JSONAction
 {
 	/**
 	 * @see f_action_BaseAction::isDocumentAction()
@@ -16,8 +16,8 @@ class preferences_ImportAction extends f_action_BaseJSONAction
 	}
 	
 	/**
-	 * @param Context $context
-	 * @param Request $request
+	 * @param change_Context $context
+	 * @param change_Request $request
 	 */
 	public function _execute($context, $request)
 	{
