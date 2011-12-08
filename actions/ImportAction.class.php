@@ -22,7 +22,6 @@ class preferences_ImportAction extends change_JSONAction
 	public function _execute($context, $request)
 	{
 		$pms = preferences_ModuleService::getInstance();
-		//$result = $pms->getPreferencesDocumentInfo();
 		$result = $pms->importPreferencesDocuments();
 		return $this->sendJSON($result);
 	}
