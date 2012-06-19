@@ -8,7 +8,7 @@ class preferences_ImportAction extends change_JSONAction
 	/**
 	 * @see f_action_BaseAction::isDocumentAction()
 	 *
-	 * @return Boolean
+	 * @return boolean
 	 */
 	protected function isDocumentAction()
 	{
