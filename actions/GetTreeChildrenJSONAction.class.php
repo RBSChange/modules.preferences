@@ -13,7 +13,7 @@ class preferences_GetTreeChildrenJSONAction extends generic_GetTreeChildrenJSONA
 	 */
 	protected function getTreeChildren($document, $subModelNames)
 	{
-		if ($document instanceof generic_persistentdocument_rootfolder && $this->getTreeType() === "wlist") 
+		if ($document instanceof generic_persistentdocument_rootfolder && ($this->getTreeType() & DocumentHelper::MODE_CUSTOM)) 
 		{
 			$result = array();
 			foreach (parent::getTreeChildren($document, null) as $preferenceDocument)
