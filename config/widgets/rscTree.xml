@@ -8,6 +8,6 @@
   	<module name="media"/>
   </datasources>
   <columns>
-    <column ref="label" flex="5" primary="true" properties="type block"/>
+	<column ref="label" flex="5" primary="true" properties="type block"/>
   </columns>
 </behaviour>

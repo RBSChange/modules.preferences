@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.preferences.bo.general" lcid="fr_FR">
-  <key id="module-name">préférences</key>
-  <key id="tree-root-name">préférences</key>
-  <key id="system-folder-name">préférences</key>
+	<key id="module-name">préférences</key>
+	<key id="tree-root-name">préférences</key>
+	<key id="system-folder-name">préférences</key>
 </i18n>

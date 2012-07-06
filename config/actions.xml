@@ -22,11 +22,11 @@
 		<body><![CDATA[
 			var itemData = listWidget.getSelectedItems()[0];
 			if (this.openDocumentEditor(itemData, 'properties')) {return;}			
-	    	form = this.getElementByAnonId("moduleForm");
+			form = this.getElementByAnonId("moduleForm");
 			if (form != null)
 			{
 				form.removeAttribute('editcomponent');
-           		form.setAttribute('editcomponent', this.buildXmlFromTreeItem(itemData));				
+		   		form.setAttribute('editcomponent', this.buildXmlFromTreeItem(itemData));				
 				form.resetDefaultActions();
 				form.maximize();
 				form.handleBroadcast(null);
