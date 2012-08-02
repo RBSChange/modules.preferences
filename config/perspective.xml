@@ -12,6 +12,7 @@
 		</model>
 	</models>
 	<toolbar>
+		<toolbarbutton name="edit" />
 		<toolbarbutton name="editPreference" />
 		<toolbarbutton name="import" />
 	</toolbar>
