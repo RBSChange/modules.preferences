@@ -3,6 +3,7 @@
 	<models>
 		<model name="modules_generic/rootfolder">
 			<children>
+				<!-- Here we need a child to refresh the list. -->
 				<child model="modules_generic/folder" />
 			</children>
 			<contextactions>
@@ -12,13 +13,12 @@
 		</model>
 	</models>
 	<toolbar>
-		<toolbarbutton name="editPreference" />
+		<toolbarbutton name="edit" />
 		<toolbarbutton name="import" />
 	</toolbar>
 	<actions>
 		<action name="refresh" single="true" icon="refresh" labeli18n="m.uixul.bo.actions.refresh" />
-		<action name="edit" single="true" permission="Load" icon="edit" labeli18n="m.uixul.bo.actions.edit" />
-		<action name="editPreference" global="true" single="true" icon="edit" labeli18n="m.uixul.bo.general.preferences" />
+		<action name="edit" single="true" global="true" permission="Load" icon="edit" labeli18n="m.uixul.bo.actions.edit" />
 		<action name="delete" permission="Delete" icon="delete" labeli18n="m.uixul.bo.actions.delete" />
 		<action name="openFolder" icon="folder_into" labeli18n="m.uixul.bo.actions.openfolder" />
 		<action name="createFolder" single="true" icon="create-folder" labeli18n="m.uixul.bo.actions.create-folder" />

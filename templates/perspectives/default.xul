@@ -12,7 +12,6 @@
 		<vbox flex="1" anonid="documentlistmode">
 			<cmoduletoolbar id="moduletoolbar" />
 			<cmodulelist id="documentlist" flex="1" />	
-			<wform id="moduleForm" />		
 		</vbox>
 		<tal:block change:documenteditors="module preferences" />			
 	</deck>

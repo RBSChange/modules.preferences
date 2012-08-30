@@ -17,84 +17,16 @@
 		]]></body>
 	</action>
 	
-	<action name="editPreference">
+	<action name="edit">
 		<parameter name="listWidget" />
 		<body><![CDATA[
-			var itemData = listWidget.getSelectedItems()[0];
-			if (this.openDocumentEditor(itemData, 'properties')) {return;}			
-			form = this.getElementByAnonId("moduleForm");
-			if (form != null)
+			var items = listWidget.getSelectedItems();
+			if (items.length == 1)
 			{
-				form.removeAttribute('editcomponent');
-		   		form.setAttribute('editcomponent', this.buildXmlFromTreeItem(itemData));				
-				form.resetDefaultActions();
-				form.maximize();
-				form.handleBroadcast(null);
+				var item = items[0];
+				var panel = (item.id == this.getRootFolderId()) ? null : 'properties';
+				this.openDocumentEditor(items[0], panel);
 			}
-		]]></body>
-	</action>	
-	<action name="editPreferenceIsActive">
-		<parameter name="itemData" />
-		<body><![CDATA[
-			return (itemData && itemData.type && (itemData.type.split('_')[2] === 'preferences'));
-		]]></body>
-	</action>
-	
-	<!-- TODO For old wform -->
-	<action name="buildXmlFromTreeItem">
-		<parameter name="itemData"/>
-		<body><![CDATA[
-			var result = new XML('<documents><document index="1"/></documents>');
-			result.document[0].component[0] = new XML('<component name="id"><![CDATA[' + itemData.id + ']]'+'></component>');
-			result.document[0].component[1] = new XML('<component name="lang"><![CDATA[' + itemData.lang + ']]'+'></component>');
-			result.document[0].component[2] = new XML('<component name="type"><![CDATA[' + itemData.type + ']]'+'></component>');
-			result.document[0].component[3] = new XML('<component name="parentid"><![CDATA[' + itemData.parentid + ']]'+'></component>');
-			result.document[0].component[4] = new XML('<component name="label"><![CDATA[' + itemData.label + ']]'+'></component>');
-			return result.toString();				
-		]]></body>
-	</action>
-	
-	<action name="onModuleInit">
-	<body><![CDATA[
-		wCore.debug("onModuleInit");
-		var rscTree = this.getRscTree();
-		var url = Context.CHROME_BASEURL + '/module=uixul&action=GetBinding&wemod=preferences&binding=widgets.wMultitree&widgetref=rscTree#wMultitree';
-		rscTree.setAttribute('mozBinding', 'url(' + url +');');
-	]]></body>
-	</action>
-	
-	
-	<action name="setNavigationTree">
-		<parameter name="navigationTree" />
-		<body><![CDATA[
-			this.mNavigationTree = navigationTree;
-			if (navigationTree)
-			{
-				navigationTree.openPath([this.getRootFolderId()]);
-				navigationTree.loadNode(this.getRootFolderId(), 'modules_generic/rootfolder');
-			}
-		]]></body>
-	</action>	
-			
-	<action name="getRscTree">
-	<body><![CDATA[
-		return this.getElementByAnonId("rscTree");
-		]]></body>
-	</action>	
-	
-	<action name="showRscTree">
-	<body><![CDATA[		
-		var elm = this.getRscTree();
-		if (elm.previousSibling != undefined && elm.previousSibling.tagName == "splitter" && elm.previousSibling.firstChild != undefined)
-		{
-			wCore.executeOnMethodExists(elm.previousSibling.firstChild, 'showWidget', function(xbl){xbl.showWidget()});
-		}
-	]]></body>
-	</action>	
-
-	<action name="getMainList">
-		<body><![CDATA[
-			return null;
 		]]></body>
 	</action>
 </actions>
