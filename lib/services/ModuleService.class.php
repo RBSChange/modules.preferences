@@ -117,7 +117,7 @@ class preferences_ModuleService extends ModuleBaseService
 					else
 					{
 						$document->setLabel($moduleName);
-						$document->setPublicationstatus("PUBLICATED");
+						$document->setPublicationstatus("PUBLISHED");
 						if ($document->isModified())
 						{
 							$tm->getPersistentProvider()->updateDocument($document);
@@ -130,7 +130,7 @@ class preferences_ModuleService extends ModuleBaseService
 					$ds = f_persistentdocument_PersistentDocumentModel::getInstanceFromDocumentModelName($modelName)->getDocumentService();
 					$document = $ds->getNewDocumentInstance();
 					$document->setLabel($moduleName);
-					$document->setPublicationstatus("PUBLICATED");
+					$document->setPublicationstatus("PUBLISHED");
 					$tm->getPersistentProvider()->insertDocument($document);
 					$ts->newLastChild($rootFolderId, $document->getId());
 					$result[] = array('id' => $document->getId(), 'CREATED' => true);
